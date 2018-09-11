@@ -1,0 +1,91 @@
+﻿@charset "utf-8";
+
+/* Need:
+• Definition of the character encoding used in the style sheet file (done)
+• Application of a web font (Two fonts are supplied for you in the html02  case4 folder.) (Done)
+• Setting background and text colors using both color values and color names 
+• An application of a semi-transparent color 
+• Selectors showing style rules applied to nested elements, child elements, and elements
+based on the id attribute 
+• Styles that modify the appearance of list and list markers 
+• Use of pseudo-elements and pseudo-classes as selectors (done)
+• Styles that modify the padding space and margin space around an element (done)
+• A style rule to generate content in the rendered page
+ */
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author:Dustin Paul Harrah 
+   Date: 9/10/18
+   
+   Filename: lake_styles.css
+
+*/
+/* Here I added all of the fonts to the style sheets. */
+@font-face {
+    font-family: Champagne;
+    src: url('cac_champagne.woff') format('woff'),
+        url('cac_champagne.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Dobkin;
+    src: url('DobkinPlain.woff') format('woff'),
+        url('DobkinPlain.ttf') format('truetype');
+}
+
+html {
+    background-color: rgb(221, 241, 188);
+}
+
+body {
+    background-color: white;
+}
+
+section>h1:first-of-type {
+    font-family: Champagne;
+    font-size: 5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+section#leftcol {
+    padding-left: 15px;
+}
+
+header a {
+    background-color: rgb(168, 14, 168);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+section#rightcol {
+    background-color: rgb(154, 91, 212);
+}
+
+aside:nth-of-type(1) {
+    background-color: rgb(255, 138, 92);
+}
+
+aside h1:nth-of-type(1) {
+    text-align: center;
+}
+
+aside:nth-of-type(2) {
+    background-color: rgb(248, 203, 107);
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: rgb(46, 46, 46);
+}
+
+nav ul {
+    text-decoration: none;
+}
