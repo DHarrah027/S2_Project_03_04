@@ -1,16 +1,16 @@
 ﻿@charset "utf-8";
 
-/* Need:
+/* Need To Do:
 • Definition of the character encoding used in the style sheet file (done)
 • Application of a web font (Two fonts are supplied for you in the html02  case4 folder.) (Done)
-• Setting background and text colors using both color values and color names 
-• An application of a semi-transparent color 
+• Setting background and text colors using both color values and color names (done)
+• An application of a semi-transparent color (done)
 • Selectors showing style rules applied to nested elements, child elements, and elements
-based on the id attribute 
-• Styles that modify the appearance of list and list markers 
+based on the id attribute (done)
+• Styles that modify the appearance of list and list markers (Done)
 • Use of pseudo-elements and pseudo-classes as selectors (done)
 • Styles that modify the padding space and margin space around an element (done)
-• A style rule to generate content in the rendered page
+• A style rule to generate content in the rendered page (Done)
  */
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
@@ -37,6 +37,7 @@ based on the id attribute
         url('DobkinPlain.ttf') format('truetype');
 }
 
+/* Here I put in the prefered background color for the page. */
 html {
     background-color: rgb(221, 241, 188);
 }
@@ -45,6 +46,7 @@ body {
     background-color: white;
 }
 
+/* Here I put in the font for the WELCOME on top.*/
 section>h1:first-of-type {
     font-family: Champagne;
     font-size: 5em;
@@ -56,6 +58,7 @@ section#leftcol {
     padding-left: 15px;
 }
 
+/* Here I put in the background color for the top links and changed their color and made them change color when they were hovered over. */
 header a {
     background-color: rgb(168, 14, 168);
     padding-top: 5px;
@@ -64,8 +67,54 @@ header a {
     text-decoration: none;
 }
 
+header a:hover,
+header a:active {
+    color: black;
+}
+
+/* Here I put in the background color for the right coloum. */
 section#rightcol {
-    background-color: rgb(154, 91, 212);
+    background-color: rgb(197, 162, 230);
+    margin-right: 0px;
+}
+
+/* Here I fixed a problem making the right coloum flot to the left leaving a white space. */
+body>section#rightcol {
+    float: right;
+    margin-right: 0px;
+}
+
+nav>ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+section#rightcol nav a {
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+}
+
+section#rightcol nav a:hover,
+section#rightcol nav a:active {
+    color: white;
+}
+
+blockquote {
+    margin-top: 35px;
+}
+
+section#rightcol blockquote::before {
+    content: open-quote;
+}
+
+section#rightcol blockquote::after {
+    content: close-quote;
+}
+
+
+nav>h2 {
+    font-family: champagne;
+    text-align: center;
 }
 
 aside:nth-of-type(1) {
@@ -80,6 +129,7 @@ aside:nth-of-type(2) {
     background-color: rgb(248, 203, 107);
 }
 
+/* Here I made the bottom tex go to the center, have a background color of a dark grey, and text color of white.*/
 footer {
     text-align: center;
     color: white;
